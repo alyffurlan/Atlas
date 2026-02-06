@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato - Atlas Consultoria</title>
+    <meta name="description" content="Solicite uma consultoria gratuita com nossos especialistas. Estamos prontos para ajudar seu negócio a crescer.">
+    <link rel="icon" href="images/logo sem nome.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo completa.png" alt="Atlas Consultoria" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-indicator"></div>
+                <a href="index.html" class="nav-link" data-page="home">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="sobre.html" class="nav-link" data-page="sobre">
+                    <i class="fas fa-building"></i>
+                    Sobre
+                </a>
+                <a href="servicos.html" class="nav-link" data-page="servicos">
+                    <i class="fas fa-cogs"></i>
+                    Serviços
+                </a>
+                <a href="contato.html" class="nav-link active" data-page="contato">
+                    <i class="fas fa-envelope"></i>
+                    Contato
+                </a>
+            </div>
+            
+            <button class="cta-button" onclick="window.location.href='contato.html#formulario'">
+                <i class="fas fa-calendar-check"></i>
+                Solicitar Orçamento
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Contato -->
+    <section class="page-hero contact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Vamos Conversar</h1>
+                <p class="hero-subtitle">Entre em contato para uma consultoria <br>gratuita de 30 minutos</p>
+                <div class="contact-hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Resposta em 2h</h4>
+                            <p>Garantimos retorno rápido</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>100% Gratuito</h4>
+                            <p>Diagnóstico sem custo</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Especialistas</h4>
+                            <p>Consultoria personalizada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário e Informações -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulário -->
+                <div class="contact-form-container" id="formulario">
+                    <div class="form-header">
+                        <h2>Solicitar Consultoria</h2>
+                        <p>Preencha o formulário e entraremos em contato em até 2 horas</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i>
+                                    Nome Completo *
+                                </label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i>
+                                    E-mail Profissional *
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">
+                                    <i class="fas fa-building"></i>
+                                    Empresa *
+                                </label>
+                                <input type="text" id="company" name="company" placeholder="Nome da sua empresa">
+                                <div class="error-message" id="companyError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i>
+                                    Telefone/WhatsApp *
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="(11) 99999-8888" required>
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">
+                                <i class="fas fa-cogs"></i>
+                                Serviço de Interesse *
+                            </label>
+                            <select id="service" name="service" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="financeira">Consultoria Financeira</option>
+                                <option value="processos">Otimização de Processos</option>
+                                <option value="digital">Transformação Digital</option>
+                                <option value="estrategica">Consultoria Estratégica</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="employees">
+                                <i class="fas fa-users"></i>
+                                Número de Funcionários
+                            </label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="employees" value="1-10">
+                                    <span>1-10</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="employees" value="11-50">
+                                    <span>11-50</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="employees" value="51-200">
+                                    <span>51-200</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="employees" value="200+">
+                                    <span>200+</span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i>
+                                Mensagem *
+                            </label>
+                            <textarea id="message" name="message" rows="5" 
+                                      placeholder="Descreva brevemente seus principais desafios ou objetivos..." 
+                                      required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span>Desejo receber insights e novidades por e-mail</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a> *</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Solicitação
+                            <div class="submit-loader"></div>
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i>
+                            Seus dados estão seguros conosco. Não compartilhamos informações com terceiros.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                        <p>Av. Paulista, 1000 - Bela Vista<br>São Paulo - SP, 01310-100</p>
+                        
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Mapa Interativo</p>
+                                <small>Localização da nossa sede</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-phone"></i> Telefones</h3>
+                        <div class="phone-list">
+                            <div class="phone-item">
+                                <strong>Comercial:</strong>
+                                <a href="tel:+5511999998888">(11) 9999-8888</a>
+                            </div>
+                            <div class="phone-item">
+                                <strong>WhatsApp:</strong>
+                                <a href="https://wa.me/5511999998888">(11) 98888-7777</a>
+                            </div>
+                            <div class="phone-item">
+                                <strong>Suporte:</strong>
+                                <a href="tel:+5511999997777">(11) 9999-7777</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-envelope"></i> E-mails</h3>
+                        <div class="email-list">
+                            <div class="email-item">
+                                <strong>Geral:</strong>
+                                <a href="mailto:contato@atlasconsultoria.com.br">contato@atlas.com.br</a>
+                            </div>
+                            <div class="email-item">
+                                <strong>Comercial:</strong>
+                                <a href="mailto:comercial@atlasconsultoria.com.br">comercial@atlas.com.br</a>
+                            </div>
+                            <div class="email-item">
+                                <strong>Suporte:</strong>
+                                <a href="mailto:suporte@atlasconsultoria.com.br">suporte@atlas.com.br</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3><i class="fas fa-clock"></i> Horário de Atendimento</h3>
+                        <div class="schedule">
+                            <div class="schedule-item">
+                                <strong>Segunda a Sexta:</strong>
+                                <span>8h às 18h</span>
+                            </div>
+                            <div class="schedule-item">
+                                <strong>Sábado:</strong>
+                                <span>9h às 13h</span>
+                            </div>
+                            <div class="schedule-item">
+                                <strong>Plantão Emergencial:</strong>
+                                <span>24/7 para clientes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta-card">
+                        <h3>Agende uma Reunião</h3>
+                        <p>Prefere agendar diretamente na nossa agenda?</p>
+                        <a href="https://calendly.com/atlas-consultoria" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-calendar-plus"></i>
+                            Agendar no Calendly
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe de Contato -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Equipe de Especialistas</h2>
+                <p>Conheça os profissionais que estarão à disposição para ajudar sua empresa</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232563eb'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3ERC%3C/text%3E%3C/svg%3E" alt="Ricardo Costa">
+                    </div>
+                    <h3>Ricardo Costa</h3>
+                    <p class="team-role">Consultor Sênior - Finanças</p>
+                    <p class="team-bio">15+ anos de experiência em consultoria financeira para PMEs</p>
+                    <a href="mailto:ricardo@atlas.com.br" class="team-contact">
+                        <i class="fas fa-envelope"></i>
+                        ricardo@atlas.com.br
+                    </a>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%237c3aed'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3EAS%3C/text%3E%3C/svg%3E" alt="Amanda Silva">
+                    </div>
+                    <h3>Amanda Silva</h3>
+                    <p class="team-role">Especialista em Processos</p>
+                    <p class="team-bio">Expert em otimização operacional e transformação digital</p>
+                    <a href="mailto:amanda@atlas.com.br" class="team-contact">
+                        <i class="fas fa-envelope"></i>
+                        amanda@atlas.com.br
+                    </a>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230ea5e9'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3EML%3C/text%3E%3C/svg%3E" alt="Marcos Lima">
+                    </div>
+                    <h3>Marcos Lima</h3>
+                    <p class="team-role">Head de Tecnologia</p>
+                    <p class="team-bio">Lidera projetos de transformação digital e inovação</p>
+                    <a href="mailto:marcos@atlas.com.br" class="team-contact">
+                        <i class="fas fa-envelope"></i>
+                        marcos@atlas.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ainda com Dúvidas?</h2>
+            <p>Fale diretamente com nosso time através do WhatsApp para um atendimento rápido e personalizado.</p>
+            
+            <a href="https://wa.me/5519991451994?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Atlas%20Consultoria" 
+   class="whatsapp-button" 
+   target="_blank"
+   id="whatsappBtn">
+    <i class="fab fa-whatsapp"></i>
+    Falar no WhatsApp
+    <span>Resposta em minutos</span>
+</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo sem nome.png" alt="Atlas Consultoria" class="logo-img-footer">
+                        </a>
+                    </div>
+                    <h3 style="color: var(--white); margin-bottom: 1rem;">Atlas Consultoria</h3>
+                    <p>Transformando desafios em oportunidades desde 2010.</p>
+                    
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Av. Paulista, 1000 - São Paulo, SP
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            (11) 9999-8888
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            contato@atlasconsultoria.com.br
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navegação Rápida</h4>
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="servicos.html">Nossos Serviços</a>
+                    <a href="contato.html">Entre em Contato</a>
+                    <a href="#">Blog Corporativo</a>
+                    <a href="#">Cases de Sucesso</a>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Nossos Serviços</h4>
+                    <a href="servicos.html#financeira">Consultoria Financeira</a>
+                    <a href="servicos.html#processos">Otimização de Processos</a>
+                    <a href="servicos.html#digital">Transformação Digital</a>
+                    <a href="#">Planejamento Estratégico</a>
+                    <a href="#">Consultoria em Marketing</a>
+                    <a href="#">Gestão de Projetos</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Conecte-se Conosco</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <p>Receba insights exclusivos</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu e-mail profissional" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Atlas Consultoria Empresarial. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-99 | Política de Privacidade | Termos de Uso</p>
+                <p>Trabalho Academico Sem Fins Lucrativos</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Solicitação Enviada com Sucesso!</h3>
+            <p>Entraremos em contato em até 2 horas úteis. Enviamos uma confirmação para seu e-mail.</p>
+            <button class="btn btn-primary" onclick="closeModal()">
+                <i class="fas fa-thumbs-up"></i>
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        // Inicializar EmailJS com sua Public Key
+        (function() {
+            // SUBSTITUA POR SUA PUBLIC KEY DO EMAILJS
+            emailjs.init('fNfAEWIXY3UplZF5-');
+        })();
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>
