@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Atlas Consultoria</title>
     <link rel="icon" href="images/logo sem nome.png">
-    <meta name="description" content="Conheça a história, missão e valores da Atlas Consultoria. Mais de 15 anos transformando empresas.">
+    <meta name="description" content="Conheça a história, missão e valores da Atlas Consultoria. Mais de 15 anos transformando empresas com expertise e inovação.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -46,36 +48,329 @@
         </div>
     </nav>
 
-     <!-- Conteúdo da página Sobre -->
-    <section class="about" style="padding: 5rem 0;">
+    <!-- Hero Sobre -->
+    <section class="page-hero">
         <div class="container">
-            <h1 style="font-size: 3rem; margin-bottom: 2rem;">Nossa História</h1>
-            <p style="font-size: 1.25rem; margin-bottom: 2rem;">
-                Fundada em 2010, a Atlas Consultoria nasceu da visão de transformar a gestão empresarial no Brasil. 
-                Começamos com uma pequena equipe e hoje somos referência em consultoria para PMEs.
-            </p>
-            
-            <div class="values-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0;">
-                <div class="service-card" style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;">
-                    <i class="fas fa-bullseye" style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 1rem;"></i>
-                    <h3>Missão</h3>
-                    <p>Capacitar empresas a alcançarem seu máximo potencial através de soluções estratégicas inovadoras.</p>
-                </div>
-                <div class="service-card" style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;">
-                    <i class="fas fa-eye" style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 1rem;"></i>
-                    <h3>Visão</h3>
-                    <p>Ser a consultoria mais confiável e eficiente para pequenas e médias empresas até 2030.</p>
-                </div>
-                <div class="service-card" style="text-align: center; padding: 2rem; background: #f8fafc; border-radius: 1rem;">
-                    <i class="fas fa-heart" style="font-size: 2.5rem; color: #1e3a8a; margin-bottom: 1rem;"></i>
-                    <h3>Valores</h3>
-                    <p>Ética, Excelência, Inovação, Parceria e Resultados Mensuráveis.</p>
+            <div class="hero-content">
+                <h1>Nossa História & Cultura</h1>
+                <p class="hero-subtitle">Mais de 15 anos liderando a transformação empresarial no Brasil</p>
+                <div class="hero-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Sobre Nós</span>
                 </div>
             </div>
         </div>
     </section>
 
-   
+    <!-- Linha do Tempo -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Jornada</h2>
+                <p>Da fundação à liderança no mercado de consultoria</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>Fundação</h3>
+                        <p>Nascimento da Atlas Consultoria com 3 sócios e uma visão clara: democratizar o acesso à consultoria de qualidade para PMEs brasileiras.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <h3>Primeiro Escritório Próprio</h3>
+                        <p>Expansão para sede própria na Avenida Paulista e contratação dos primeiros consultores especialistas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h3>Expansão Nacional</h3>
+                        <p>Abertura de escritórios em Rio de Janeiro e Belo Horizonte. Atendimento a mais de 100 clientes simultaneamente.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Certificação ISO 9001</h3>
+                        <p>Certificação internacional de qualidade. Lançamento da divisão de Transformação Digital.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Prêmio Melhor Consultoria</h3>
+                        <p>Reconhecimento como Melhor Consultoria para PMEs pelo Instituto Brasileiro de Excelência Empresarial.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3>Liderança e Inovação</h3>
+                        <p>+200 clientes transformados, equipe de 50 especialistas e expansão para soluções em IA e Analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão, Valores -->
+    <section class="mvv-section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Princípios</h2>
+                <p>O que nos guia em cada decisão e projeto</p>
+            </div>
+            
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Missão</h3>
+                    <p>Capacitar empresas brasileiras a alcançarem excelência operacional e crescimento sustentável através de soluções estratégicas inovadoras, éticas e orientadas a resultados.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Visão</h3>
+                    <p>Ser reconhecida como a consultoria mais confiável e impactante para pequenas e médias empresas na América Latina até 2030, sendo referência em transformação empresarial.</p>
+                </div>
+                
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check"></i> <strong>Ética Inegociável</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Excelência em Tudo</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Inovação Contínua</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Parceria Verdadeira</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Resultados Mensuráveis</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Aprendizado Constante</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe de Liderança -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Liderança Experiente</h2>
+                <p>Conheça os visionários por trás do sucesso da Atlas</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">AC</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ana Carvalho</h3>
+                        <p class="team-role">CEO & Fundadora</p>
+                        <p class="team-bio">MBA em Gestão Empresarial pela FGV com 20+ anos de experiência em consultoria estratégica. Já liderou transformações em mais de 150 empresas.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">RM</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ricardo Mendes</h3>
+                        <p class="team-role">Diretor de Operações</p>
+                        <p class="team-bio">Especialista em otimização de processos com background em engenharia. Certificado Lean Six Sigma Black Belt. Liderou projetos com ROI médio de 300%.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">FS</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Fernanda Santos</h3>
+                        <p class="team-role">Diretora de Tecnologia</p>
+                        <p class="team-bio">Ex-Google, especialista em transformação digital e IA. Mestra em Ciência da Computação pelo MIT. Traz visão global para inovação tecnológica.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultura e Diferenciais -->
+    <section class="culture-section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Cultura Única</h2>
+                <p>O que torna a Atlas um ambiente extraordinário</p>
+            </div>
+            
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mente de Dono</h3>
+                    <p>Cada consultor age como proprietário do projeto, garantindo comprometimento total e resultados excepcionais.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Aprendizado Contínuo</h3>
+                    <p>Investimos +100 horas/ano em treinamento por consultor. Todos têm orçamento para certificações e cursos.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Parceria de Verdade</h3>
+                    <p>Não somos prestadores de serviço, somos extensionistas da equipe do cliente. Trabalhamos lado a lado.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Foco em Resultados</h3>
+                    <p>98% dos projetos entregam ROI acima do prometido. Garantia de resultados ou devolução do investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prêmios e Reconhecimentos -->
+    <section class="awards-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reconhecimento do Mercado</h2>
+                <p>Prêmios e certificações que validam nossa excelência</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Melhor Consultoria PME 2022</h3>
+                    <p>Instituto Brasileiro de Excelência Empresarial</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificação ISO 9001</h3>
+                    <p>Sistema de Gestão da Qualidade Internacional</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Great Place to Work 2023</h3>
+                    <p>Reconhecimento como excelente ambiente de trabalho</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Top 10 Inovação</h3>
+                    <p>Prêmio Inovação Empresarial - Revista Exame</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas Impactantes -->
+    <section class="stats-section" style="background: linear-gradient(135deg, var(--primary), #1e3a8a); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Números que Contam Nossa História</h2>
+                <p style="color: rgba(255,255,255,0.8);">Impacto real em mais de uma década de atuação</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Empresas Transformadas</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Taxa de Sucesso</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Especialistas Senior</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">R$ 2.5B</div>
+                    <div class="stat-label">Em Valor Gerado</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Setores de Atuação</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Faça Parte Dessa História</h2>
+            <p>Junte-se a mais de 200 empresas que transformaram seus negócios com a Atlas Consultoria.</p>
+            
+            <div class="cta-buttons">
+                <a href="contato.html" class="cta-button-large">
+                    <i class="fas fa-handshake"></i>
+                    Tornar-se Cliente
+                </a>
+                <a href="servicos.html" class="btn btn-secondary">
+                    <i class="fas fa-book-open"></i>
+                    Ver Nossos Serviços
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -83,16 +378,11 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <div class="logo">
-                        <p >
-                            <a href="#" >
-                                <img src="images/logo sem nome.png" alt="Atlas Consultoria" class="logo-img-footer">
-                                
-                            </a>
-                        </p>
-                        <h3 style="color: var(--white); margin-bottom: 2rem;">Atlas Consultoria</h3>
+                        <a href="#">
+                            <img src="images/logo sem nome.png" alt="Atlas Consultoria" class="logo-img-footer">
+                        </a>
                     </div>
-                    
-                    
+                    <h3 style="color: var(--white); margin-bottom: 1rem;">Atlas Consultoria</h3>
                     <p>Transformando desafios em oportunidades desde 2010.</p>
                     
                     <div class="contact-info">
@@ -166,11 +456,12 @@
             <div class="copyright">
                 <p>&copy; 2026 Atlas Consultoria Empresarial. Todos os direitos reservados.</p>
                 <p>CNPJ: 12.345.678/0001-99 | Política de Privacidade | Termos de Uso</p>
-                <p>Trabalho Academico Sem Fins Lucrativos</p>
+                <p>Trabalho Acadêmico Sem Fins Lucrativos</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>
