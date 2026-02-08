@@ -214,37 +214,76 @@ function initFAQ() {
     });
 }
 
-// Animar números nas estatísticas
+// Animação melhorada para números
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
     
     statNumbers.forEach(stat => {
-        const target = parseInt(stat.textContent);
+        const originalText = stat.textContent;
+        let target;
+        
+        // Extrair número do texto
+        if (originalText.includes('+')) {
+            target = parseInt(originalText.replace('+', ''));
+        } else if (originalText.includes('%')) {
+            target = parseInt(originalText.replace('%', ''));
+        } else if (originalText.includes('R$')) {
+            target = parseFloat(originalText.replace('R$', '').replace('B', ''));
+        } else {
+            target = parseInt(originalText);
+        }
+        
         let current = 0;
-        const increment = target / 50;
+        const increment = target / 60; // Mais suave
+        const duration = 1500; // 1.5 segundos
+        const interval = duration / 60;
+        
         const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
                 current = target;
                 clearInterval(timer);
+                
+                // Formatar o número final
+                if (originalText.includes('+')) {
+                    stat.textContent = '+' + Math.floor(current);
+                } else if (originalText.includes('%')) {
+                    stat.textContent = Math.floor(current) + '%';
+                } else if (originalText.includes('R$')) {
+                    stat.textContent = 'R$ ' + current.toFixed(1) + 'B';
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
+            } else {
+                // Formatar durante a animação
+                if (originalText.includes('+')) {
+                    stat.textContent = '+' + Math.floor(current);
+                } else if (originalText.includes('%')) {
+                    stat.textContent = Math.floor(current) + '%';
+                } else if (originalText.includes('R$')) {
+                    stat.textContent = 'R$ ' + current.toFixed(1) + 'B';
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
             }
-            stat.textContent = Math.floor(current) + (stat.textContent.includes('%') ? '%' : 
-                            stat.textContent.includes('R$') ? 'B' : '');
-        }, 30);
+        }, interval);
     });
 }
 
 // Inicializar quando a página carregar
 document.addEventListener('DOMContentLoaded', function() {
-    // Verificar se estamos na página sobre
-    if (document.querySelector('.timeline-section')) {
-        // Iniciar animações
-        setTimeout(animateStats, 500);
-    }
-    
-    // Iniciar FAQ se existir
-    if (document.querySelector('.faq-question')) {
-        initFAQ();
+    if (document.querySelector('.stats-section')) {
+        // Iniciar animações quando a seção estiver visível
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(animateStats, 300);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(document.querySelector('.stats-section'));
     }
 });
     
