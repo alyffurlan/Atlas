@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(document.querySelector('.stats-section'));
     }
 });
-    
+
     // ===== COPY TO CLIPBOARD =====
     window.copyToClipboard = function(text) {
         navigator.clipboard.writeText(text).then(() => {
@@ -310,4 +310,56 @@ document.addEventListener('DOMContentLoaded', function() {
         // Tooltip
         link.title = 'Clique com Ctrl para copiar';
     });
+
+    // Animação da Timeline
+function initTimeline() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const lineProgress = document.querySelector('.line-progress');
+    const timelineSection = document.querySelector('.timeline-section');
+    
+    // Calcular progresso da linha
+    function updateLineProgress() {
+        const sectionTop = timelineSection.offsetTop;
+        const sectionHeight = timelineSection.offsetHeight;
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        
+        // Quando a seção entra na viewport
+        if (scrollPosition > sectionTop - windowHeight + 100) {
+            const progress = Math.min(
+                ((scrollPosition - sectionTop + windowHeight - 100) / 
+                (sectionHeight + 100)) * 100, 
+                100
+            );
+            lineProgress.style.height = progress + '%';
+        }
+    }
+    
+    // Animar itens quando entrarem na viewport
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Atualizar linha durante scroll
+    window.addEventListener('scroll', updateLineProgress);
+    updateLineProgress(); // Inicial
+}
+
+// Inicializar quando a página carregar
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.timeline-section')) {
+        initTimeline();
+    }
+});
 });
