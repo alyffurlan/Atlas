@@ -10,138 +10,6 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos específicos para a timeline */
-        .fh5co-timeline {
-            padding: 5rem 0;
-            background: var(--light);
-        }
-        
-        .timeline {
-            position: relative;
-            padding: 0;
-            list-style: none;
-        }
-        
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 3px;
-            margin-left: -1.5px;
-            background: var(--primary);
-        }
-        
-        .timeline-heading {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .timeline-heading h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            position: relative;
-            display: inline-block;
-            padding: 0 2rem;
-            background: var(--light);
-        }
-        
-        .timeline > li {
-            position: relative;
-            margin-bottom: 50px;
-            min-height: 50px;
-        }
-        
-        .timeline > li:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        .timeline-badge {
-            position: absolute;
-            top: 16px;
-            left: 50%;
-            width: 60px;
-            height: 60px;
-            margin-left: -30px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 60px;
-            font-size: 1.5rem;
-            z-index: 100;
-            box-shadow: 0 0 0 5px var(--light);
-        }
-        
-        .timeline-panel {
-            position: relative;
-            width: 45%;
-            float: left;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .timeline-unverted .timeline-panel {
-            float: left;
-        }
-        
-        .timeline-inverted .timeline-panel {
-            float: right;
-        }
-        
-        .timeline-title {
-            margin-top: 0;
-            color: var(--dark);
-            font-size: 1.5rem;
-        }
-        
-        .timeline-body p {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-        
-        .timeline-inverted:before {
-            left: 50%;
-        }
-        
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .timeline:before {
-                left: 40px;
-            }
-            
-            .timeline > li {
-                margin-bottom: 30px;
-            }
-            
-            .timeline-badge {
-                left: 40px;
-                margin-left: 0;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                font-size: 1.2rem;
-            }
-            
-            .timeline-panel {
-                width: calc(100% - 90px);
-                float: right;
-                margin-left: 90px;
-            }
-            
-            .timeline-unverted .timeline-panel,
-            .timeline-inverted .timeline-panel {
-                float: right;
-            }
-        }
-
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -195,193 +63,291 @@
         </div>
     </section>
 
-    <!-- História da Empresa -->
-    <section id="fh5co-about" style="padding: 5rem 0;">
+    <!-- Linha do Tempo -->
+    <section class="timeline-section">
         <div class="container">
-            <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
-                <div class="col-img" style="flex: 1; min-width: 300px; padding: 2rem;">
-                    <div style="background: linear-gradient(135deg, var(--primary-light), var(--primary)); height: 400px; border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-building" style="font-size: 8rem; opacity: 0.7;"></i>
+            <div class="section-title">
+                <h2>Nossa Jornada</h2>
+                <p>Da fundação à liderança no mercado de consultoria</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>Fundação</h3>
+                        <p>Nascimento da Atlas Consultoria com 3 sócios e uma visão clara: democratizar o acesso à consultoria de qualidade para PMEs brasileiras.</p>
                     </div>
                 </div>
-                <div class="col-content" style="flex: 1; min-width: 300px; padding: 2rem;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--dark);">Nossa Origem</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray); margin-bottom: 1.5rem;">
-                        A Atlas Consultoria nasceu em 2010, fruto da visão de três empreendedores que identificaram uma lacuna no mercado: 
-                        a falta de consultoria empresarial de alta qualidade e acessível para pequenas e médias empresas brasileiras.
-                    </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--gray);">
-                        Com apenas uma sala e um sonho, iniciamos nossa jornada com o compromisso de transformar a gestão empresarial no Brasil, 
-                        combinando expertise internacional com profundo conhecimento do mercado local. Hoje, somos referência em consultoria estratégica, 
-                        mas nossa essência continua a mesma: parceria genuína e resultados transformadores.
-                    </p>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <h3>Primeiro Escritório Próprio</h3>
+                        <p>Expansão para sede própria na Avenida Paulista e contratação dos primeiros consultores especialistas.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline - Nossa Jornada (Estilo do exemplo) -->
-    <section id="fh5co-timeline" class="fh5co-timeline">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="timeline">
-                        <li class="timeline-heading">
-                            <div><h3>Nossa Jornada</h3></div>
-                        </li>
-                        
-                        <li class="timeline-unverted">
-                            <div class="timeline-badge"><i class="fas fa-rocket"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2010 - Fundação</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Nascimento da Atlas Consultoria com 3 sócios e uma visão clara: democratizar o acesso à consultoria de qualidade para PMEs brasileiras. Primeiro escritório no centro de São Paulo.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge"><i class="fas fa-expand"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2013 - Primeira Sede Própria</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Expansão para sede própria na Avenida Paulista. Contratação dos primeiros consultores especialistas e atendimento a mais de 50 clientes simultaneamente.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-unverted">
-                            <div class="timeline-badge"><i class="fas fa-map"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2016 - Expansão Nacional</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Abertura de escritórios no Rio de Janeiro e Belo Horizonte. Atendimento a mais de 100 clientes simultaneamente e reconhecimento como uma das consultorias que mais crescem no país.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge"><i class="fas fa-award"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2019 - Certificação ISO 9001</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Certificação internacional de qualidade. Lançamento da divisão de Transformação Digital e expansão da equipe para 30 especialistas.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-unverted">
-                            <div class="timeline-badge"><i class="fas fa-trophy"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2022 - Prêmio Melhor Consultoria</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Reconhecimento como Melhor Consultoria para PMEs pelo Instituto Brasileiro de Excelência Empresarial. Expansão para soluções em IA e Analytics.</p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge"><i class="fas fa-chart-line"></i></div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3 class="timeline-title">2026 - Liderança e Inovação</h3>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>+200 clientes transformados, equipe de 50 especialistas, presença em 5 estados brasileiros. Referência nacional em consultoria estratégica e transformação digital.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h3>Expansão Nacional</h3>
+                        <p>Abertura de escritórios em Rio de Janeiro e Belo Horizonte. Atendimento a mais de 100 clientes simultaneamente.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h3>Certificação ISO 9001</h3>
+                        <p>Certificação internacional de qualidade. Lançamento da divisão de Transformação Digital.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Prêmio Melhor Consultoria</h3>
+                        <p>Reconhecimento como Melhor Consultoria para PMEs pelo Instituto Brasileiro de Excelência Empresarial.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3>Liderança e Inovação</h3>
+                        <p>+200 clientes transformados, equipe de 50 especialistas e expansão para soluções em IA e Analytics.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Missão, Visão, Valores -->
-    <section class="mvv-section" style="background: var(--light); padding: 5rem 0;">
+    <section class="mvv-section" style="background: var(--light);">
         <div class="container">
             <div class="section-title">
                 <h2>Nossos Princípios</h2>
                 <p>O que nos guia em cada decisão e projeto</p>
             </div>
             
-            <div class="mvv-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="service-card" style="text-align: center; padding: 2rem;">
-                    <div class="service-icon" style="margin-bottom: 1rem;">
-                        <i class="fas fa-bullseye" style="font-size: 2.5rem; color: var(--primary);"></i>
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Missão</h3>
                     <p>Capacitar empresas brasileiras a alcançarem excelência operacional e crescimento sustentável através de soluções estratégicas inovadoras, éticas e orientadas a resultados.</p>
                 </div>
                 
-                <div class="service-card" style="text-align: center; padding: 2rem;">
-                    <div class="service-icon" style="margin-bottom: 1rem;">
-                        <i class="fas fa-eye" style="font-size: 2.5rem; color: var(--primary);"></i>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
                     <h3>Visão</h3>
                     <p>Ser reconhecida como a consultoria mais confiável e impactante para pequenas e médias empresas na América Latina até 2030, sendo referência em transformação empresarial.</p>
                 </div>
                 
-                <div class="service-card" style="text-align: center; padding: 2rem;">
-                    <div class="service-icon" style="margin-bottom: 1rem;">
-                        <i class="fas fa-heart" style="font-size: 2.5rem; color: var(--primary);"></i>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <i class="fas fa-heart"></i>
                     </div>
                     <h3>Valores</h3>
-                    <div style="text-align: left; margin-top: 1rem;">
-                        <p><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Ética Inegociável</strong></p>
-                        <p><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Excelência em Tudo</strong></p>
-                        <p><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Inovação Contínua</strong></p>
-                        <p><i class="fas fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>Parceria Verdadeira</strong></p>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check"></i> <strong>Ética Inegociável</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Excelência em Tudo</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Inovação Contínua</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Parceria Verdadeira</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Resultados Mensuráveis</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Aprendizado Constante</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe de Liderança -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Liderança Experiente</h2>
+                <p>Conheça os visionários por trás do sucesso da Atlas</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">AC</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ana Carvalho</h3>
+                        <p class="team-role">CEO & Fundadora</p>
+                        <p class="team-bio">MBA em Gestão Empresarial pela FGV com 20+ anos de experiência em consultoria estratégica. Já liderou transformações em mais de 150 empresas.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">RM</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ricardo Mendes</h3>
+                        <p class="team-role">Diretor de Operações</p>
+                        <p class="team-bio">Especialista em otimização de processos com background em engenharia. Certificado Lean Six Sigma Black Belt. Liderou projetos com ROI médio de 300%.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">FS</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Fernanda Santos</h3>
+                        <p class="team-role">Diretora de Tecnologia</p>
+                        <p class="team-bio">Ex-Google, especialista em transformação digital e IA. Mestra em Ciência da Computação pelo MIT. Traz visão global para inovação tecnológica.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Equipe -->
-    <section style="padding: 5rem 0;">
+    <!-- Cultura e Diferenciais -->
+    <section class="culture-section" style="background: var(--light);">
         <div class="container">
             <div class="section-title">
-                <h2>Nossa Liderança</h2>
-                <p>Conheça os visionários que conduzem a Atlas</p>
+                <h2>Nossa Cultura Única</h2>
+                <p>O que torna a Atlas um ambiente extraordinário</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="text-align: center; background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold;">
-                        AC
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3 style="margin-bottom: 0.5rem;">Ana Carvalho</h3>
-                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">CEO & Fundadora</p>
-                    <p style="color: var(--gray);">20+ anos em consultoria estratégica. MBA pela FGV. Liderou transformações em mais de 150 empresas.</p>
+                    <h3>Mente de Dono</h3>
+                    <p>Cada consultor age como proprietário do projeto, garantindo comprometimento total e resultados excepcionais.</p>
                 </div>
                 
-                <div style="text-align: center; background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold;">
-                        RM
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 style="margin-bottom: 0.5rem;">Ricardo Mendes</h3>
-                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Diretor de Operações</p>
-                    <p style="color: var(--gray);">Especialista em otimização de processos. Certificado Lean Six Sigma Black Belt. ROI médio de 300% em projetos.</p>
+                    <h3>Aprendizado Contínuo</h3>
+                    <p>Investimos +100 horas/ano em treinamento por consultor. Todos têm orçamento para certificações e cursos.</p>
                 </div>
                 
-                <div style="text-align: center; background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <div style="width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary-light), var(--primary)); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold;">
-                        FS
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-handshake"></i>
                     </div>
-                    <h3 style="margin-bottom: 0.5rem;">Fernanda Santos</h3>
-                    <p style="color: var(--primary); font-weight: 600; margin-bottom: 1rem;">Diretora de Tecnologia</p>
-                    <p style="color: var(--gray);">Ex-Google, especialista em IA e transformação digital. Mestra em Ciência da Computação pelo MIT.</p>
+                    <h3>Parceria de Verdade</h3>
+                    <p>Não somos prestadores de serviço, somos extensionistas da equipe do cliente. Trabalhamos lado a lado.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Foco em Resultados</h3>
+                    <p>98% dos projetos entregam ROI acima do prometido. Garantia de resultados ou devolução do investimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prêmios e Reconhecimentos -->
+    <section class="awards-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reconhecimento do Mercado</h2>
+                <p>Prêmios e certificações que validam nossa excelência</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Melhor Consultoria PME 2022</h3>
+                    <p>Instituto Brasileiro de Excelência Empresarial</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificação ISO 9001</h3>
+                    <p>Sistema de Gestão da Qualidade Internacional</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Great Place to Work 2023</h3>
+                    <p>Reconhecimento como excelente ambiente de trabalho</p>
+                </div>
+                
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Top 10 Inovação</h3>
+                    <p>Prêmio Inovação Empresarial - Revista Exame</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas Impactantes -->
+    <section class="stats-section" style="background: linear-gradient(135deg, var(--primary), #1e3a8a); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Números que Contam Nossa História</h2>
+                <p style="color: rgba(255,255,255,0.8);">Impacto real em mais de uma década de atuação</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Empresas Transformadas</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Taxa de Sucesso</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Especialistas Senior</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">R$ 2.5B</div>
+                    <div class="stat-label">Em Valor Gerado</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Setores de Atuação</div>
                 </div>
             </div>
         </div>
@@ -393,7 +359,7 @@
             <h2>Faça Parte Dessa História</h2>
             <p>Junte-se a mais de 200 empresas que transformaram seus negócios com a Atlas Consultoria.</p>
             
-            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+            <div class="cta-buttons">
                 <a href="contato.html" class="cta-button-large">
                     <i class="fas fa-handshake"></i>
                     Tornar-se Cliente
@@ -496,29 +462,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Script para a timeline (opcional - para animações)
-        document.addEventListener('DOMContentLoaded', function() {
-            const timelineItems = document.querySelectorAll('.timeline > li');
-            
-            // Adiciona classe de animação quando o item entra na viewport
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            // Configura estado inicial e observador
-            timelineItems.forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(20px)';
-                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(item);
-            });
-        });
-    </script>
+    <script src="js/components.js"></script>
 </body>
 </html>
