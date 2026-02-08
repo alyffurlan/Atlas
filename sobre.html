@@ -10,7 +10,138 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a timeline */
+        .fh5co-timeline {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            margin-left: -1.5px;
+            background: var(--primary);
+        }
+        
+        .timeline-heading {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .timeline-heading h3 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding: 0 2rem;
+            background: var(--light);
+        }
+        
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+        
+        .timeline > li:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .timeline-badge {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin-left: -30px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 1.5rem;
+            z-index: 100;
+            box-shadow: 0 0 0 5px var(--light);
+        }
+        
+        .timeline-panel {
+            position: relative;
+            width: 45%;
+            float: left;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-unverted .timeline-panel {
+            float: left;
+        }
+        
+        .timeline-inverted .timeline-panel {
+            float: right;
+        }
+        
+        .timeline-title {
+            margin-top: 0;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+        
+        .timeline-body p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .timeline-inverted:before {
+            left: 50%;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 40px;
+            }
+            
+            .timeline > li {
+                margin-bottom: 30px;
+            }
+            
+            .timeline-badge {
+                left: 40px;
+                margin-left: 0;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .timeline-panel {
+                width: calc(100% - 90px);
+                float: right;
+                margin-left: 90px;
+            }
+            
+            .timeline-unverted .timeline-panel,
+            .timeline-inverted .timeline-panel {
+                float: right;
+            }
+        }
 
+    </style>
 </head>
 <body>
     <!-- Navbar -->
